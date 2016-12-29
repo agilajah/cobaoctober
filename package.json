@@ -1,0 +1,27 @@
+{
+  "name": "cobaoctober",
+  "version": "1.0.0",
+  "description": "Test laravel elixir",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agilajah/cobaoctober.git"
+  },
+  "author": "Febi Agil Ifdillah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agilajah/cobaoctober/issues"
+  },
+  "homepage": "https://github.com/agilajah/cobaoctober#readme",
+  "devDependencies": {
+    "laravel-elixir": "^5.0",
+    "laravel-elixir-livereload": "^1.1.6"
+  },
+  "dependencies": {}
+}
