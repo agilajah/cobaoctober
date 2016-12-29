@@ -1,0 +1,11 @@
+plugin:
+    name: 'cobaoctober.movies::lang.plugin.name'
+    description: 'cobaoctober.movies::lang.plugin.description'
+    author: cobaoctober
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Movies
+        url: cobaoctober/movies/movies
+        icon: icon-video-camera

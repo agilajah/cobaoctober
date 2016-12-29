@@ -1,0 +1,10 @@
+name: Movies
+form: $/cobaoctober/movies/models/movie/fields.yaml
+modelClass: cobaoctober\Movies\Models\Movie
+defaultRedirect: cobaoctober/movies/movies
+create:
+    redirect: 'cobaoctober/movies/movies/update/:id'
+    redirectClose: cobaoctober/movies/movies
+update:
+    redirect: cobaoctober/movies/movies
+    redirectClose: cobaoctober/movies/movies

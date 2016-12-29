@@ -1,0 +1,17 @@
+fields:
+    name:
+        label: 'Movie title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    description:
+        label: Description
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: richeditor
+    year:
+        label: Year
+        oc.commentPosition: ''
+        span: auto
+        type: text
