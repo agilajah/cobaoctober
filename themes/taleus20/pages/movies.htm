@@ -1,5 +1,5 @@
 title = "Movies"
-url = "/movies"
+url = "/movies/:page?"
 layout = "default"
 is_hidden = 0
 
@@ -8,8 +8,9 @@ modelClass = "cobaoctober\Movies\Models\Movie"
 displayColumn = "name"
 noRecordsMessage = "No records found"
 detailsPage = "movie-single"
-detailsKeyColumn = "id"
-detailsUrlParameter = "id"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 10
 pageNumber = "{{ :page }}"
 ==
 {% set records = builderList.records %}
@@ -36,7 +37,7 @@ pageNumber = "{{ :page }}"
                 {% endif %}
             {% endspaceless %}
             </h3>
-            
+
             {{ html_limit(record.description, 150) | raw }}
         </li>
     {% else %}
