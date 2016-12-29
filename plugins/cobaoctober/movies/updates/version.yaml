@@ -1,2 +1,5 @@
 1.0.1:
-    - Initialize plugin.
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Updated table cobaoctober_movies_'
+    - builder_table_update_cobaoctober_movies_.php
