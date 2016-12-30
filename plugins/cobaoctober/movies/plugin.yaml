@@ -9,3 +9,8 @@ navigation:
         label: Movies
         url: cobaoctober/movies/movies
         icon: icon-video-camera
+        sideMenu:
+            side-menu-item:
+                label: Genres
+                url: cobaoctober/movies/genres
+                icon: icon-tag

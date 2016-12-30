@@ -1,0 +1,10 @@
+name: Genres
+form: $/cobaoctober/movies/models/genre/fields.yaml
+modelClass: cobaoctober\Movies\Models\Genre
+defaultRedirect: cobaoctober/movies/genres
+create:
+    redirect: 'cobaoctober/movies/genres/update/:id'
+    redirectClose: cobaoctober/movies/genres
+update:
+    redirect: cobaoctober/movies/genres
+    redirectClose: cobaoctober/movies/genres

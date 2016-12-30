@@ -25,4 +25,25 @@ class Movie extends Model
      * @var string The database table used by the model.
      */
     public $table = 'cobaoctober_movies_';
+
+
+    /* Relations */
+
+    public $belongsToMany = [
+      'genres' => [
+          'cobaoctober\Movies\Models\Genre',
+          'table' => 'cobaoctober_movies_movies_genres',
+          'order' => 'genre_title'
+        ]
+    ];
+
+    public $attachOne = [
+      'poster' => 'System\Models\File'
+    ];
+
+    public $attachMany = [
+      'movie_gallery' => 'System\Models\File'
+    ];
+
+
 }

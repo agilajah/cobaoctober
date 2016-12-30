@@ -26,6 +26,26 @@ a {
   color: #e81c4f;
 }
 
+/*
+ +|--------------------------------------------------------------------------
+ +| Gallery
+ +|--------------------------------------------------------------------------
+ +*/
+
+.gallery{
+    padding:20px 15px;
+    background: #efefef;
+    border:1px solid #ccc;
+    border-radius:3px;
+    li{
+        float: left;
+        margin:5px;
+     }
+     img, a{
+         display: block;
+     }
+ }
+
 
 /* =======================================================================
 ## ++ Cleafix
@@ -54,9 +74,3 @@ a {
 
 .clr{clear:both;}
 .clr{content:"test";}
-
-
-
-
-
-
