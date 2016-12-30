@@ -9,3 +9,9 @@
 1.0.4:
     - 'Created table cobaoctober_movies_movies_genres'
     - builder_table_create_cobaoctober_movies_movies_genres.php
+1.0.5:
+    - 'Updated table cobaoctober_movies_'
+    - builder_table_update_cobaoctober_movies__2.php
+1.0.6:
+    - 'Updated table cobaoctober_movies_'
+    - builder_table_update_cobaoctober_movies__3.php

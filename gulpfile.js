@@ -17,7 +17,7 @@ elixir(function(mix){
 
   mix.livereload([
     'themes/taleus20/assets/compiled/css/style.css',
-    'themes/taleus20/**/*.htm',
+    'themes/taleus20/*/*.htm',
     'themes/taleus20/assets/compiled/js/*.js'
   ])
 })

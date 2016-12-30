@@ -23,7 +23,11 @@ notFoundMessage = "Record not found"
 
     <h3>Description</h3>
 
+    <h3>Actors</h3>
 
+    {% for actor in record.actors %}
+      {{ actor.actor_name }}
+    {% endfor %}
     {{ record.description | raw }}
 
     <h3>Gallery</h3>

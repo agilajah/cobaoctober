@@ -26,6 +26,7 @@ class Movie extends Model
      */
     public $table = 'cobaoctober_movies_';
 
+    protected $jsonable = ['actors'];
 
     /* Relations */
 
