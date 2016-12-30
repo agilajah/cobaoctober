@@ -14,3 +14,7 @@ navigation:
                 label: Genres
                 url: cobaoctober/movies/genres
                 icon: icon-tag
+            side-menu-item2:
+                label: Actors
+                url: cobaoctober/movies/actor
+                icon: icon-user

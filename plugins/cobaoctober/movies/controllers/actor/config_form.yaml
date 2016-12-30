@@ -1,0 +1,10 @@
+name: Actor
+form: $/cobaoctober/movies/models/actor/fields.yaml
+modelClass: cobaoctober\Movies\Models\Actor
+defaultRedirect: cobaoctober/movies/actor
+create:
+    redirect: 'cobaoctober/movies/actor/update/:id'
+    redirectClose: cobaoctober/movies/actor
+update:
+    redirect: cobaoctober/movies/actor
+    redirectClose: cobaoctober/movies/actor

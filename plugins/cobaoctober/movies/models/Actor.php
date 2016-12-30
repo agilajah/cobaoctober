@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Movie extends Model
+class Actor extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
@@ -24,32 +24,20 @@ class Movie extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'cobaoctober_movies_';
+    public $table = 'cobaoctober_movies_actors';
 
-    // protected $jsonable = ['actors'];
-
-    /* Relations */
+    // Relations
 
     public $belongsToMany = [
-      'genres' => [
-          'cobaoctober\Movies\Models\Genre',
-          'table' => 'cobaoctober_movies_movies_genres',
-          'order' => 'genre_title'
-        ],
-        'actors' => [
-            'cobaoctober\Movies\Models\Actor',
+
+        'movies' => [
+            'cobaoctober\Movies\Models\Movie',
             'table' => 'cobaoctober_movies_movies_actors',
             'order' => 'name'
           ]
     ];
 
-    public $attachOne = [
-      'poster' => 'System\Models\File'
-    ];
-
-    public $attachMany = [
-      'movie_gallery' => 'System\Models\File'
-    ];
-
-
+    public function getFullNameAttribute(){
+      return $this->name . " " . $this->lastname;
+    }
 }
