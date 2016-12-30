@@ -1,0 +1,29 @@
+title = "Genres"
+url = "/genres/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "cobaoctober\Movies\Models\Genre"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "genre_title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    <h2>{{ attribute(record, displayColumn) }}</h2>
+
+    {% for movie in record.movies %}
+
+        <a><h3>{{ movie.name }}</h3></a>
+
+        {{ html_limit(movie.description, 150) | raw }}<br>
+
+    {% endfor %}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
