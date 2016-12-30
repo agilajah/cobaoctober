@@ -56,19 +56,5 @@ fields:
         type: relation
     actors:
         label: Actors
-        oc.commentPosition: ''
-        prompt: 'Add new item'
-        span: auto
-        type: repeater
-        form:
-            fields:
-                actor_name:
-                    label: 'Actor name'
-                    oc.commentPosition: ''
-                    span: auto
-                    type: text
-                actor_age:
-                    label: 'Actor age'
-                    oc.commentPosition: ''
-                    span: auto
-                    type: text
+        span: left
+        type: actorbox

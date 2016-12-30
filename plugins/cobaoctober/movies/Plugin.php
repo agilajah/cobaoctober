@@ -8,6 +8,15 @@ class Plugin extends PluginBase
     {
     }
 
+    public function registerFormWidgets() {
+      return [
+          'cobaoctober\Movies\FormWidgets\ActorBox' => [
+              'label' => 'Actorbox field',
+              'code' => 'actorbox'
+            ]
+        ];
+    }
+
     public function registerSettings()
     {
     }
