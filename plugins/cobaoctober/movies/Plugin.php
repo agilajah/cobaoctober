@@ -7,7 +7,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
       return [
-        'cobaoctober\Movies\Components\Actors' => "actors"
+        'cobaoctober\Movies\Components\Actors' => "actors",
+        'cobaoctober\Movies\Components\ActorForm' => "actorform"
       ];
     }
 
