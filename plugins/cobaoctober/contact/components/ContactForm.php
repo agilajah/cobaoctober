@@ -10,6 +10,8 @@ use Validator;
 
 use Redirect;
 
+use ValidationException;
+
 class ContactForm extends ComponentBase {
 	public function componentDetails() {
 		return [
@@ -21,19 +23,19 @@ class ContactForm extends ComponentBase {
 
 	public function onSend() {
 
-		$validator = Validator::make(
-		    [
-		        'name' => Input::get('name'),
-		        'email' => Input::get('email')
-		    ],
-		    [
+		$data = post();
+
+
+
+		$rules = [
 		        'name' => 'required|min:5',
 		        'email' => 'required|email'
-		    ]
-		);
+		    ];
+
+		$validator = Validator::make($data, $rules);
 
 		if ($validator->fails()){
-			return Redirect::back()->withErrors($validator);
+			throw new ValidationException($validator);
 		} else {
 			$vars = ['name' => Input::get('name'), 'email' => Input::get('email'), 'content' => Input::get('content')];
 
