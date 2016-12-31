@@ -6,6 +6,10 @@ use Input;
 
 use Mail;
 
+use Validator;
+
+use Redirect;
+
 class ContactForm extends ComponentBase {
 	public function componentDetails() {
 		return [
@@ -17,14 +21,31 @@ class ContactForm extends ComponentBase {
 
 	public function onSend() {
 
-		$vars = ['name' => Input::get('name'), 'email' => Input::get('email'), 'content' => Input::get('content')];
+		$validator = Validator::make(
+		    [
+		        'name' => Input::get('name'),
+		        'email' => Input::get('email')
+		    ],
+		    [
+		        'name' => 'required|min:5',
+		        'email' => 'required|email'
+		    ]
+		);
 
-		Mail::send('cobaoctober.contact::mail.message', $vars, function($message) {
+		if ($validator->fails()){
+			return Redirect::back()->withErrors($validator);
+		} else {
+			$vars = ['name' => Input::get('name'), 'email' => Input::get('email'), 'content' => Input::get('content')];
 
-		    $message->to('febiagil20@gmail.com', 'Admin Person');
-		    $message->subject('New message for contact form');
+			Mail::send('cobaoctober.contact::mail.message', $vars, function($message) {
 
-		});
+			    $message->to('emaildestination@gmail.com', 'Admin Person');
+			    $message->subject('New message for contact form');
+
+			});
+		}
+
+		
 
 	}
 }
