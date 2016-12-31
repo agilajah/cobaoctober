@@ -20,7 +20,6 @@ class ActorForm extends ComponentBase {
 		];
 	}
 
-
 	public function onSave() {
 
 		$actor = new Actor();
