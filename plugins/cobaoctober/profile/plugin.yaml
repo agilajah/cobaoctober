@@ -1,0 +1,6 @@
+plugin:
+    name: 'cobaoctober.profile::lang.plugin.name'
+    description: 'cobaoctober.profile::lang.plugin.description'
+    author: cobaoctober
+    icon: oc-icon-adjust
+    homepage: ''
