@@ -1,0 +1,7 @@
+{% set comments = __SELF__.comments %}
+
+<ul>
+  {% for comment in comments %}
+    <li>{{ comment.writer }} {{ comment.content }}</li>
+  {% endfor %}
+</ul>

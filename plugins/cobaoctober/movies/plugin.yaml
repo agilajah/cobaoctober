@@ -18,3 +18,7 @@ navigation:
                 label: Actors
                 url: cobaoctober/movies/actor
                 icon: icon-user
+            side-menu-item3:
+                label: Comment
+                url: cobaoctober/movies/comments
+                icon: icon-comment

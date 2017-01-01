@@ -9,6 +9,8 @@ identifierValue = "{{ :slug }}"
 modelKeyColumn = "slug"
 displayColumn = "name"
 notFoundMessage = "Record not found"
+
+[commentform]
 ==
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
@@ -21,14 +23,15 @@ notFoundMessage = "Record not found"
 
     <h4>{{ record.year}}</h4>
 
-    <h3>Description</h3>
-
     <h3>Actors</h3>
 
     {% for actor in record.actors %}
       {{ actor.name }}
-      {{ actor.lastname }}
+      {{ actor.lastname }} |
     {% endfor %}
+    
+    <h3>Description</h3>
+    
     {{ record.description | raw }}
 
     <h3>Gallery</h3>
@@ -51,6 +54,25 @@ notFoundMessage = "Record not found"
         <a href="/genres/{{ genre.slug }}">{{ genre.genre_title}}</a><br>
 
     {% endfor %}
+
+    <h3>Comments</h3>
+
+    <ul>
+    {% for comment in record.comments %}
+        <li class="comment">
+            <div class="comment-header"> 
+                <ul>
+                    <li><strong>{{comment.writer}}</strong> </li>
+                    <li class="pull-right"><div class="time-left"> Posted {{ comment.timestamp| time_diff }} </div></li>
+               </ul>
+            </div> 
+            <div class="comment-content">
+                {{ comment.content }}
+            </div>
+        </li>
+    {% endfor %}
+    {% component 'commentform' %}
+    </ul>
 
 {% else %}
     {{ notFoundMessage }}

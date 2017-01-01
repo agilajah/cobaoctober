@@ -1,0 +1,10 @@
+columns:
+    writer:
+        label: writer
+        type: text
+        searchable: true
+        sortable: true
+    content:
+        label: content
+        type: text
+        searchable: true

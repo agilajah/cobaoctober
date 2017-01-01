@@ -1,0 +1,22 @@
+
+
+<form data-request="commentform::onSave">
+<!-- 
+	<label>Movie id</label> -->
+	<input type="hidden" name="movie_id" value="{{ record.id }}">
+
+	<label>Your name</label>
+	<input type="text" name="writer">
+	{{ errors.first('writer')}}
+
+	<label>Your comment</label>
+	<textarea type="text" name="content"></textarea> 
+	{{ errors.first('content')}}
+
+	<button type="submit">Comment</button>
+
+
+	{% flash success %}
+		<p>{{ message }}</p>
+	{% endflash %}
+</form>

@@ -24,3 +24,15 @@
 1.0.9:
     - 'Created table cobaoctober_movies_movies_actors'
     - builder_table_create_cobaoctober_movies_movies_actors.php
+1.0.10:
+    - 'Created table cobaoctober_movies_comments'
+    - builder_table_create_cobaoctober_movies_comments.php
+1.0.11:
+    - 'Updated table cobaoctober_movies_comments'
+    - builder_table_update_cobaoctober_movies_comments.php
+1.0.12:
+    - 'Created table cobaoctober_movies_movies_comments'
+    - builder_table_create_cobaoctober_movies_movies_comments.php
+1.0.13:
+    - 'Updated table cobaoctober_movies_comments'
+    - builder_table_update_cobaoctober_movies_comments_2.php

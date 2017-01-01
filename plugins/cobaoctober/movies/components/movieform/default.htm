@@ -1,0 +1,32 @@
+<!-- <form data-request="actorform::onSave"> -->
+<form method="POST" action="{{ url('add-movies') }}" accept-charset="UTF8" enctype="multipart/form-data">
+	
+	<input type="hidden" name="_handler" value="onSave">
+
+	{{ form_token() }}
+
+	{{ form_sessionKey() }}
+
+	<label>Movie title</label>
+	<input type="text" name="name">
+
+	<label>Movie description</label>
+	<input type="text" name="description">
+
+	<label>Year</label>
+	<input type="text" name="year">
+
+	<p>Example : breaking-bad</p>
+	<label>Slug</label>
+	<input type="text" name="slug">
+
+	<label>Movie poster</label>
+	<input type="file" name="movieposter">
+
+	<button type="submit">Save Movie</button>
+
+
+	{% flash success %}
+		<p>{{ message }}</p>
+	{% endflash %}
+</form>

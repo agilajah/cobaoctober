@@ -1,0 +1,12 @@
+fields:
+    writer:
+        label: Writer
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    content:
+        label: Content
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: textarea

@@ -30,6 +30,8 @@ class Movie extends Model
 
     /* Relations */
 
+    protected $fillable = ['name', 'description', 'year', 'slug'];
+
     public $belongsToMany = [
       'genres' => [
           'cobaoctober\Movies\Models\Genre',
@@ -41,6 +43,14 @@ class Movie extends Model
             'table' => 'cobaoctober_movies_movies_actors',
             'order' => 'name'
           ]
+    ];
+
+    public $hasMany = [
+      'comments' =>[
+        'cobaoctober\Movies\Models\Comment',
+        'table' => 'cobaoctober_movies_movies_comments',
+        'order' => 'timestamp'
+      ]
     ];
 
     public $attachOne = [
